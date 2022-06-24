@@ -14,7 +14,23 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@meli-challenge/config": ["libs/config/src/index.ts"],
+      "@meli-challenge/core": ["libs/core/src/index.ts"],
+      "@meli-challenge/meli-api/products": [
+        "libs/meli-api/products/src/index.ts"
+      ],
+      "@meli-challenge/meli-ui/products": [
+        "libs/meli-ui/products/src/index.ts"
+      ],
+      "@meli-challenge/products": ["libs/products/src/index.ts"],
+      "@meli-challenge/products/products-api": [
+        "libs/products/products-api/src/index.ts"
+      ],
+      "@meli-challenge/products/products-ui": [
+        "libs/products/products-ui/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

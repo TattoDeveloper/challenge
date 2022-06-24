@@ -1,5 +1,14 @@
 {
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
-  "projects": {}
+  "projects": {
+    "config": "libs/config",
+    "core": "libs/core",
+    "meli": "apps/meli",
+    "meli-e2e": "apps/meli-e2e",
+    "meli-middleware": "apps/meli-middleware",
+    "products": "libs/products",
+    "products-products-api": "libs/products/products-api",
+    "products-products-ui": "libs/products/products-ui"
+  }
 }
