@@ -7,8 +7,8 @@
     "meli": "apps/meli",
     "meli-e2e": "apps/meli-e2e",
     "meli-middleware": "apps/meli-middleware",
-    "products": "libs/products",
     "products-products-api": "libs/products/products-api",
+    "products-products-core": "libs/products/products-core",
     "products-products-ui": "libs/products/products-ui"
   }
 }

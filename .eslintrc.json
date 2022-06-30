@@ -18,7 +18,17 @@
               }
             ]
           }
-        ]
+        ],
+        "curly": ["error"],
+        "default-param-last": ["error"],
+        "eqeqeq": ["error", "always"],
+        "max-params": ["error", 3],
+        "space-in-parens": ["error", "always", { "exceptions": ["{}"] }],
+        "space-before-function-paren": [
+          "error",
+          { "anonymous": "always", "named": "never", "asyncArrow": "always" }
+        ],
+        "comma-spacing": ["error", { "before": false, "after": true }]
       }
     },
     {

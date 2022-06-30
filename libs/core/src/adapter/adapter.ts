@@ -1,4 +1,4 @@
-import { container } from '@meli-challenge/config';
+/* import { container } from '@meli-challenge/config';
 
 export const adapter = async <T, K>(symbol: any, params: T[] = []) => {
   let errorData: any;
@@ -13,3 +13,4 @@ export const adapter = async <T, K>(symbol: any, params: T[] = []) => {
 
   return { data: data ?? null, error: errorData ?? null };
 };
+ */
