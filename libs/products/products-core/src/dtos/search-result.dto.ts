@@ -1,6 +1,6 @@
 import { Product } from "../entities/product.entity";
 
-interface Author {
+export interface Author {
     name: string;
     lastname: string;
 }

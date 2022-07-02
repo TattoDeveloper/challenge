@@ -1,0 +1,21 @@
+@import "../scss/variables.module.scss";
+
+.header {
+    height: 50px;
+    background-color: $primary-color;
+    font-size: 18px;
+    
+    &-container {
+        & > div{
+            height: 50px;
+        }
+
+        input {
+            width: 100%;
+        }
+    }
+
+    img {
+       width: 44px;
+    } 
+}

@@ -36,3 +36,4 @@ export function dependency( symbol: Symbol ) {
         Reflect.defineMetadata('dependencies', currentDependencies , target, propertyKey)
     }
 }
+

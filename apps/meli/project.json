@@ -16,7 +16,7 @@
         "polyfills": "apps/meli/src/polyfills.ts",
         "tsConfig": "apps/meli/tsconfig.app.json",
         "assets": ["apps/meli/src/favicon.ico", "apps/meli/src/assets"],
-        "styles": ["apps/meli/src/styles.scss"],
+        "styles": ["apps/meli/src/styles.scss", "libs/products/src/lib/scss/variables.module.scss"],
         "scripts": [],
         "webpackConfig": "@nrwl/react/plugins/webpack"
       },

@@ -1,1 +1,1 @@
-export * from './lib/products-products-ui';
+export * from "./lib/header/header";

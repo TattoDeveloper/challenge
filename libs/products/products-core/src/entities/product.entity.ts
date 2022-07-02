@@ -10,5 +10,6 @@ export interface Product{
   price: price;
   picture: string;
   condition: string;
-  free_shipping: boolean
+  free_shipping: boolean;
+  description?: string;
 }

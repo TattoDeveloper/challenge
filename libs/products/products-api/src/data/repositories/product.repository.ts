@@ -1,6 +1,7 @@
 import { httpClient, response } from "@meli-challenge/core";
-import { IProductRepository, SearchResultDTO } from "@meli-challenge/products/products-core";
+import { IProductRepository, ProductDetailDTO, SearchResultDTO } from "@meli-challenge/products/products-core";
 import { injectable } from "tsyringe";
+import { ProductDetailMapper } from "../mapper/product-detail.mapper";
 import { SearchMapper } from "../mapper/search.mapper";
 
 @injectable()
@@ -13,7 +14,17 @@ export class ProductRepository implements IProductRepository {
         })
     }
 
-    getById(id: string): Promise<any> {
-        throw new Error("Method not implemented.");
+    @response<ProductDetailDTO>( ProductDetailMapper )
+    async getById(id: string): Promise<ProductDetailDTO> {
+
+        const response = await Promise.all([
+                httpClient({
+                    url: `https://api.mercadolibre.com/items/${id}`
+                }),
+                httpClient({
+                    url: `https://api.mercadolibre.com/items/${id}/description`
+                })
+            ])
+        return {...response[0], ...response[1]}
     }
 }

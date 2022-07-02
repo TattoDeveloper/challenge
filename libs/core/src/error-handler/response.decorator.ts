@@ -10,7 +10,7 @@ export function response<K>(Mapper?: any) {
     descriptor.value = async function (...args: any[]) {
       try{
         const methodResponse = await method.apply(this, args);
-        console.log(Mapper)
+        
         return new Mapper(...args).create(methodResponse);
       } catch(error) {
         // handle custom exception

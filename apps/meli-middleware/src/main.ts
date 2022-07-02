@@ -2,6 +2,7 @@ import { controllerRouter } from './app/decorators/controllers/controller.decora
 import * as express from 'express';
 import { BASE_URL } from './app/config/base-url';
 import './app/controllers/products-controller'
+import { authorSignature } from './app/middleware/author-signature';
 
 const app = express();
 
@@ -9,6 +10,7 @@ app.get(BASE_URL, (req, res) => {
   res.send({ message: 'Welcome to meli-middleware!' });
 });
 
+app.use(authorSignature)
 app.use(controllerRouter)
 
 
