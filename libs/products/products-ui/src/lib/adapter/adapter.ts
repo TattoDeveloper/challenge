@@ -1,16 +1,17 @@
-/* import { container } from '@meli-challenge/config';
+
+import 'reflect-metadata'
+import { uiContainer } from '../../config/ui.container';
 
 export const adapter = async <T, K>(symbol: any, params: T[] = []) => {
   let errorData: any;
   let data: K;
-  const newType: any = container.get(symbol);
-
   try {
+    const newType: any = uiContainer.resolve(symbol);
     data = await newType.execute(...params);
+    return { data, error: null}
   } catch (error: any) {
     errorData = { code: error.code ?? 0, message: error.message };
+    return { data: null, error: errorData}
   }
-
-  return { data: data ?? null, error: errorData ?? null };
 };
- */
+ 

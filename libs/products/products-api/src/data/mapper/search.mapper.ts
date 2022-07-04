@@ -29,7 +29,8 @@ export class SearchMapper extends Mapper<SearchResponseDTO,SearchResultDTO>{
                 },
                 picture: result.thumbnail,
                 condition: result.condition,
-                free_shipping: result.shipping.free_shipping
+                free_shipping: result.shipping['free_shipping'],
+                city: result.address?.['city_name']
              } as unknown as Product
           }),
           categories: this.getCategories(params.filters[0]?.values) as string[]

@@ -1,5 +1,3 @@
-import { ErrorHandler } from './error-handler';
-
 export function response<K>(Mapper?: any) {
   return function (
     target: any,

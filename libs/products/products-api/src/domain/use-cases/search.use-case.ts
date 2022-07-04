@@ -10,7 +10,6 @@ export class SearchApiUseCase extends UseCaseBase<string, any> {
 
     constructor() {
         super();
-        console.log(productApiTypes.IProductRepository)
         this.repository = container.resolve(productApiTypes.IProductRepository)
     }
 

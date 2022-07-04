@@ -12,4 +12,5 @@ export interface Product{
   condition: string;
   free_shipping: boolean;
   description?: string;
+  city?: string;
 }

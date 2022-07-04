@@ -1,13 +1,13 @@
 import { Mapper } from "@meli-challenge/core";
 import { ProductDetailDTO } from "@meli-challenge/products/products-core";
 import { DetailResponseDTO } from "../../dtos/detail-response.dto";
-import { Result } from "../../dtos/search-response.dto";
 
 
 
 export class ProductDetailMapper extends Mapper<DetailResponseDTO, ProductDetailDTO > {
     protected createMap(params: DetailResponseDTO): ProductDetailDTO {
-        console.log(params)
+        const picture = params.pictures[0]
+        console.log(picture)
         return {
             id: params.id,
             title: params.title,
@@ -17,8 +17,8 @@ export class ProductDetailMapper extends Mapper<DetailResponseDTO, ProductDetail
               decimals: 0
             },
             condition: params.condition,
-            picture: params.thumbnail,
-            free_shipping: params.shipping.free_shipping,
+            picture: picture.url,
+            free_shipping: params.shipping['free_shipping'],
             description: params.plain_text,
         } 
     }

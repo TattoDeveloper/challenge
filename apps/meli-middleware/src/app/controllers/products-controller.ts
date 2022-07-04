@@ -6,7 +6,6 @@ import { SearchApiUseCase, ProductRepository, DetailApiUseCase } from "@meli-cha
 @controller('/items')
 export class ProductController {   
 
-
    @get('/')
    public async search(req: Request, res: Response){
      res.json(await new SearchApiUseCase().execute(req.query.q as string))

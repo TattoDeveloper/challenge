@@ -18,7 +18,8 @@ export interface Result {
     category_id: string;
     thumbnail: string;
     condition: string;
-    shipping: Record<string, boolean>
+    shipping: Record<string, any>;
+    address?: Record<string, any>
 }
 
 
