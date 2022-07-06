@@ -10,7 +10,6 @@ export class DetailApiUseCase extends UseCaseBase<string, Product> {
 
     constructor() {
         super();
-        console.log(productApiTypes.IProductRepository)
         this.repository = container.resolve(productApiTypes.IProductRepository)
     }
 
