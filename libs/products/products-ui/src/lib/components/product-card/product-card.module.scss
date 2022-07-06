@@ -42,13 +42,20 @@
             font-size: $size-24;
             margin: 0;
         }
+    }
 
-        span {
-            display: block;
-            margin: $size-32 0;
-            font-size: $size-46;
-            line-height: 1;
-        }
+    &__amount {
+        display: block;
+        margin: $size-32 0;
+        font-size: $size-46;
+        line-height: 1;
+    }
+
+    &__condition {
+        font-size: $size-14;
+        color: $tertiary-text-color;
+        margin-bottom: $size-16;
+        display: block;
     }
 
     &__button {

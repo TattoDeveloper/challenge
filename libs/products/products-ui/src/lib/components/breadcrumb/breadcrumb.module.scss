@@ -1,7 +1,21 @@
-/*
- * Replace this with your own classes
- *
- * e.g.
- * .container {
- * }
-*/
+@import "/variables.module.scss";
+
+.breadcrumb {
+    margin: $size-16 0;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        padding-left: 0;
+
+        li{
+            color: $secondary-text-color;
+            text-transform: capitalize;
+            
+            svg {
+                margin: 0 5px;
+                font-size: $size-14;
+            }
+        }
+    }
+}

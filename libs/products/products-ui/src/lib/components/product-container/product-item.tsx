@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { formatMoney } from "../../utils/util";
 import styles from './product.module.scss';
 
 export interface ProductListItemProps {
@@ -22,13 +23,13 @@ export const ProductListItem: FC<ProductListItemProps> = ({
                 <img src={picture} alt={title} />
               </div>
               <div className={ styles["item-info"]}>
-                <span>
-                  $ { price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") }
-                  {freeShipping && <i>s</i>}
+                <span data-testid="price" >
+                  {formatMoney( price ) }
+                  {freeShipping && <i data-testid="icon">s</i>}
                 </span>
-                <p>{ title } </p>
+                <p data-testid="title" >{ title }</p>
               </div>
            </div>
-             <span className={ styles["item-city"] }>{ city }</span>
+             <span data-testid="city" className={ styles["item-city"] }>{ city }</span>
     </article>
 }

@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "esModuleInterop": true,
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
@@ -13,6 +14,7 @@
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
       "@meli-challenge/config": ["libs/config/src/index.ts"],

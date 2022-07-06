@@ -8,5 +8,5 @@ export interface Author {
 export interface SearchResultDTO{
     products: Product[];
     categories?: string[];
-    autor?: Author;
+    author?: Author;
 }

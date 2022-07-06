@@ -1,4 +1,4 @@
-import { Product } from "@meli-challenge/products/products-core"
+import { Product, SearchResultDTO } from "@meli-challenge/products/products-core"
 import { Breadcrumb, 
     Layout, ProductContainer, 
     ProductListItem, 
@@ -7,12 +7,12 @@ import { Link, useSearchParams } from "react-router-dom"
 
 export const Results = () => {
     const[ searchParams ] = useSearchParams()
-    const query = searchParams.get('search')
-    const { data, error, isLoad } = useAdapter<any, any>(SearchUseCase,[query])
+    const query: string = searchParams.get('search') as string;
+    const { data, error, isLoad } = useAdapter<string, SearchResultDTO>(SearchUseCase,[query])
 
     return (
         <Layout>
-            <Breadcrumb />
+            <Breadcrumb categories={ data?.categories?.length ? data?.categories : [query]}  />
             <ProductContainer>
                <>
                { isLoad && <p>Cargando...</p> }

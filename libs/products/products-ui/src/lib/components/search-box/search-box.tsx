@@ -2,7 +2,7 @@ import React, { ChangeEvent, FormEvent, useState } from 'react';
 import styles from './search-box.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
-import { createSearchParams, useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 /* eslint-disable-next-line */
 export interface SearchBoxProps { id?:any}
@@ -13,6 +13,7 @@ export function SearcBox(props: SearchBoxProps) {
   const navigate = useNavigate()
 
   const changeQuery = ( { target }: ChangeEvent<HTMLInputElement> ) => {
+     console.log(target.value)
      setQuery(target.value)
   }
   const submit = ( event: FormEvent<HTMLFormElement>) => {
@@ -26,7 +27,8 @@ export function SearcBox(props: SearchBoxProps) {
       <form onSubmit={submit}>
         <div className={styles['search-container']}>
           <input 
-           onChange={changeQuery} 
+           onChange={changeQuery}
+           aria-label="Nunca pares de buscar"
            name="search"
            value={ query }
            className={styles['search-input']} 

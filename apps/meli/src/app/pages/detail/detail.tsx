@@ -1,3 +1,4 @@
+import { ProductDetailDTO } from "@meli-challenge/products/products-core"
 import {
     Breadcrumb, 
     DetailUseCase, 
@@ -10,15 +11,15 @@ import { useParams } from "react-router-dom"
 
 export const Details = () => {
     const { id } = useParams()
-    const { data, error, isLoad } = useAdapter<any, any>(DetailUseCase,[id])
+    const { data: product, error, isLoad } = useAdapter<string, ProductDetailDTO>(DetailUseCase,[id as string])
 
     return (
         <Layout>
-            <Breadcrumb/>
+            <Breadcrumb categories={[]}/>
             <ProductContainer>
                 <>
                 {isLoad && <p>Cargando...</p>}
-                {data && <ProductCard {...data} />}
+                {product && <ProductCard { ...product as ProductDetailDTO} />}
                 </>
             </ProductContainer>
         </Layout>
