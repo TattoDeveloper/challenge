@@ -4,10 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate, useSearchParams } from 'react-router-dom';
 
-/* eslint-disable-next-line */
-export interface SearchBoxProps { id?:any}
 
-export function SearcBox(props: SearchBoxProps) {
+export function SearcBox() {
   const[ searchParams ] = useSearchParams()
   const [query, setQuery] = useState(searchParams.get('search') ?? '')
   const navigate = useNavigate()

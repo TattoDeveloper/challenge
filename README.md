@@ -4,6 +4,8 @@
 
 ### El challenge fue desarrollado cont React / express / Typescript y Nx para manejar el workspace.
 
+Antes de correr los proyectos, generar un archivo .env basado en el archivo .env.example e incluir las respectivas urls.
+
 Para correr los proyectos:
 - front: nx serve meli
 - api: nx serve meli-middleware

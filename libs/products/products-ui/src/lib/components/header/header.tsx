@@ -23,7 +23,7 @@ export function Header({
                 <img src={logo} alt='Logo Meli' />
               </Link>
             </Col>
-            <Col md={11} className={style['header-search-container']}>
+            <Col xs={9} md={10} lg={11} className={style['header-search-container']}>
                <SearcBox />
             </Col>
           </Row>

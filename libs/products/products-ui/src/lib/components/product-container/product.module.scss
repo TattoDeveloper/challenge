@@ -52,7 +52,14 @@
             font-size: $size-12;
             color: $secondary-text-color;
         }
-    
+
+        &-icon {
+            width: 15px;
+            height: 15px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-left: 12px;
+        }
     }
 
     .item + .item {

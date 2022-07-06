@@ -32,7 +32,7 @@ export function ProductCard({
             <img src={picture}  alt={title} />
           </figure>
           <div>
-            <h2>Descripcion del producto</h2>
+            <h2>Descripción del producto</h2>
             <p>{ description }</p>
           </div>
       </div>

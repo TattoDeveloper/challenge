@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import { formatMoney } from '../../utils/util';
 import styles from './product.module.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTruck } from '@fortawesome/free-solid-svg-icons'
 
 export interface ProductListItemProps {
     picture: string;
@@ -25,7 +27,9 @@ export const ProductListItem: FC<ProductListItemProps> = ({
               <div className={ styles['item-info']}>
                 <span data-testid='price' >
                   {formatMoney( price ) }
-                  {freeShipping && <i data-testid='icon'>s</i>}
+                  {
+                    freeShipping &&  <FontAwesomeIcon className={ styles['item-icon']} data-testid='icon' icon={faTruck} />
+                  }
                 </span>
                 <p data-testid='title' >{ title }</p>
               </div>

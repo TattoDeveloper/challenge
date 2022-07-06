@@ -9,7 +9,7 @@ describe('Meli search', () => {
     cy.get('article').first().click()
     cy.url().should('contain', '/items/')
     cy.get('h1').should('exist')
-    cy.get('h2').should('exist').and('contain.text', 'Descripcion del producto')
+    cy.get('h2').should('exist').and('contain.text', 'Descripción del producto')
     cy.get('p').should('exist')
   });
 
@@ -20,14 +20,14 @@ describe('Meli search', () => {
     cy.get('article').first().click()
     cy.url().should('contain', '/items/')
     cy.get('h1').should('exist')
-    cy.get('h2').should('exist').and('contain.text', 'Descripcion del producto')
+    cy.get('h2').should('exist').and('contain.text', 'Descripción del producto')
     cy.get('p').should('exist')
   });
 
   it('Should product detail if we pass product id on url', () => {
     cy.visit('/items/MLA1141502144');
     cy.get('h1').should('exist')
-    cy.get('h2').should('exist').and('contain.text', 'Descripcion del producto')
+    cy.get('h2').should('exist').and('contain.text', 'Descripción del producto')
     cy.get('p').should('exist')
   });
 
