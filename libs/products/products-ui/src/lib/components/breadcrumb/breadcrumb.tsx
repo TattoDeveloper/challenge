@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./breadcrumb.module.scss";
+import React from 'react';
+import styles from './breadcrumb.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
@@ -11,7 +11,7 @@ export interface BreadcrumbProps {
 export function Breadcrumb({ categories }: BreadcrumbProps) {
   return (
     <div className={styles['breadcrumb']}>
-      <ul aria-label="breadcrumb">
+      <ul aria-label='breadcrumb'>
         {
           categories.map( ( category: string, index: number )=> {
             return <li key={category}>

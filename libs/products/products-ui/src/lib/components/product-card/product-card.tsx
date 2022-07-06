@@ -1,4 +1,4 @@
-import { Product, ProductDetailDTO } from '@meli-challenge/products/products-core';
+import { ProductDetailDTO } from '@meli-challenge/products/products-core';
 import React from 'react'
 import { Button } from 'react-bootstrap';
 import { formatMoney } from '../../utils/util';

@@ -12,7 +12,6 @@ export function controller( controllerPath: string ) {
       for (const methodName in paths ) {
             const routeHandler = target.prototype[methodName]
             const path = paths[methodName]
-            console.log(target.prototype)
             controllerRouter.get(`${BASE_URL}${controllerPath}${path}`, routeHandler.bind(target))
         }
     }

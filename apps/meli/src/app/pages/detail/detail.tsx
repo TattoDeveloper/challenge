@@ -1,4 +1,4 @@
-import { ProductDetailDTO } from "@meli-challenge/products/products-core"
+import { ProductDetailDTO } from '@meli-challenge/products/products-core'
 import {
     Breadcrumb, 
     DetailUseCase, 
@@ -6,12 +6,12 @@ import {
     ProductCard, 
     ProductContainer, 
     useAdapter 
-} from "@meli-challenge/products/products-ui"
-import { useParams } from "react-router-dom"
+} from '@meli-challenge/products/products-ui'
+import { useParams } from 'react-router-dom'
 
 export const Details = () => {
     const { id } = useParams()
-    const { data: product, error, isLoad } = useAdapter<string, ProductDetailDTO>(DetailUseCase,[id as string])
+    const { data: product, isLoad } = useAdapter<string, ProductDetailDTO>(DetailUseCase,[id as string])
 
     return (
         <Layout>

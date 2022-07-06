@@ -1,9 +1,9 @@
-import { Product, SearchResultDTO } from "@meli-challenge/products/products-core"
+import { Product, SearchResultDTO } from '@meli-challenge/products/products-core'
 import { Breadcrumb, 
     Layout, ProductContainer, 
     ProductListItem, 
-    SearchUseCase, useAdapter } from "@meli-challenge/products/products-ui"
-import { Link, useSearchParams } from "react-router-dom"
+    SearchUseCase, useAdapter } from '@meli-challenge/products/products-ui'
+import { Link, useSearchParams } from 'react-router-dom'
 
 export const Results = () => {
     const[ searchParams ] = useSearchParams()

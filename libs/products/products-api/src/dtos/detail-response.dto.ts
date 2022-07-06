@@ -1,4 +1,4 @@
-import { Result } from "./search-response.dto";
+import { Result } from './search-response.dto';
 
 export interface DetailResponseDTO extends Result {
     plain_text: string;

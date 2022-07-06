@@ -1,8 +1,8 @@
-import { httpClient, response } from "@meli-challenge/core";
-import { IProductRepository, ProductDetailDTO, SearchResultDTO } from "@meli-challenge/products/products-core";
-import { injectable } from "tsyringe";
-import { ProductDetailMapper } from "../mapper/product-detail.mapper";
-import { SearchMapper } from "../mapper/search.mapper";
+import { httpClient, response } from '@meli-challenge/core';
+import { IProductRepository, ProductDetailDTO, SearchResultDTO } from '@meli-challenge/products/products-core';
+import { injectable } from 'tsyringe';
+import { ProductDetailMapper } from '../mapper/product-detail.mapper';
+import { SearchMapper } from '../mapper/search.mapper';
 
 @injectable()
 export class ProductRepository implements IProductRepository {

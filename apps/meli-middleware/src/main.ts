@@ -1,9 +1,9 @@
 import { controllerRouter } from './app/decorators/controllers/controller.decorator';
-import * as express from 'express';
+import  express from 'express';
 import { BASE_URL } from './app/config/base-url';
 import './app/controllers/products-controller'
 import { authorSignature } from './app/middleware/author-signature';
-import * as cors from 'cors'
+import cors from 'cors'
 
 const app = express();
 

@@ -1,9 +1,9 @@
 /* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import 'reflect-metadata'
-import { UseCaseBase } from "@meli-challenge/core";
-import { IProductRepository, SearchResultDTO } from "@meli-challenge/products/products-core";
-import { injectable, container } from "tsyringe";
-import { productApiTypes } from "@meli-challenge/products/products-api"
+import { UseCaseBase } from '@meli-challenge/core';
+import { IProductRepository, SearchResultDTO } from '@meli-challenge/products/products-core';
+import { injectable, container } from 'tsyringe';
+import { productApiTypes } from '@meli-challenge/products/products-api'
 
 @injectable()
 export class SearchApiUseCase extends UseCaseBase<string, SearchResultDTO> {

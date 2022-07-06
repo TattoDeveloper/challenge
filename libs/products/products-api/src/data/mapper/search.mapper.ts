@@ -1,6 +1,6 @@
-import { Mapper } from "@meli-challenge/core";
-import { Product, SearchResultDTO } from "@meli-challenge/products/products-core";
-import { Filters, FilterValues, Result, SearchResponseDTO} from "../../dtos/search-response.dto";
+import { Mapper } from '@meli-challenge/core';
+import { Product, SearchResultDTO } from '@meli-challenge/products/products-core';
+import { Filters, FilterValues, Result, SearchResponseDTO} from '../../dtos/search-response.dto';
 
 export class SearchMapper extends Mapper<SearchResponseDTO,SearchResultDTO>{
     

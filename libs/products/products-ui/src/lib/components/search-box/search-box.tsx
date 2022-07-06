@@ -13,7 +13,6 @@ export function SearcBox(props: SearchBoxProps) {
   const navigate = useNavigate()
 
   const changeQuery = ( { target }: ChangeEvent<HTMLInputElement> ) => {
-     console.log(target.value)
      setQuery(target.value)
   }
   const submit = ( event: FormEvent<HTMLFormElement>) => {
@@ -28,12 +27,12 @@ export function SearcBox(props: SearchBoxProps) {
         <div className={styles['search-container']}>
           <input 
            onChange={changeQuery}
-           aria-label="Nunca pares de buscar"
-           name="search"
+           aria-label='Nunca pares de buscar'
+           name='search'
            value={ query }
            className={styles['search-input']} 
-           type="search" 
-           placeholder="Nunca pares de buscar" 
+           type='search' 
+           placeholder='Nunca pares de buscar' 
           />
           <button type='submit' className={styles['search-submit']}>
             <FontAwesomeIcon icon={faMagnifyingGlass} />

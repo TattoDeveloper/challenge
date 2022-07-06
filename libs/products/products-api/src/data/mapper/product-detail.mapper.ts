@@ -1,6 +1,6 @@
-import { Mapper } from "@meli-challenge/core";
-import { ProductDetailDTO } from "@meli-challenge/products/products-core";
-import { DetailResponseDTO } from "../../dtos/detail-response.dto";
+import { Mapper } from '@meli-challenge/core';
+import { ProductDetailDTO } from '@meli-challenge/products/products-core';
+import { DetailResponseDTO } from '../../dtos/detail-response.dto';
 
 
 
