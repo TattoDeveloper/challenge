@@ -4,4 +4,5 @@ import { Author } from './search-result.dto';
 export interface ProductDetailDTO extends Product {
     author?: Author;
     sold_quantity: number;
+    category?: string;
 }

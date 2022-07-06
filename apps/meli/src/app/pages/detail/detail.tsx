@@ -12,10 +12,14 @@ import { useParams } from 'react-router-dom'
 export const Details = () => {
     const { id } = useParams()
     const { data: product, isLoad } = useAdapter<string, ProductDetailDTO>(DetailUseCase,[id as string])
+   
 
     return (
         <Layout>
-            <Breadcrumb categories={[]}/>
+            <Breadcrumb categories={
+                product ? [product.category as string, product.title] :
+                ['']
+            }/>
             <ProductContainer>
                 <>
                 {isLoad && <p>Cargando...</p>}

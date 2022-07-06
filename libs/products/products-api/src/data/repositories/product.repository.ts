@@ -25,6 +25,9 @@ export class ProductRepository implements IProductRepository {
                     url: `https://api.mercadolibre.com/items/${id}/description`
                 })
             ])
-        return {...response[0], ...response[1]}
+        const categoryResponse = await httpClient({
+            url: `https://api.mercadolibre.com/categories/${response[0].category_id}`
+        })
+        return {...response[0], ...response[1], category: categoryResponse}
     }
 }

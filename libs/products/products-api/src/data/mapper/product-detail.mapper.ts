@@ -20,6 +20,7 @@ export class ProductDetailMapper extends Mapper<DetailResponseDTO, ProductDetail
             sold_quantity: params['sold_quantity'],
             free_shipping: params.shipping['free_shipping'],
             description: params.plain_text,
+            category: params.category.name
         } 
     }
 
