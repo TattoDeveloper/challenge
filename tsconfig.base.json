@@ -1,6 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "esModuleInterop": true,
     "rootDir": ".",
     "sourceMap": true,
     "declaration": false,
@@ -13,6 +14,7 @@
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
       "@meli-challenge/config": ["libs/config/src/index.ts"],
@@ -23,9 +25,11 @@
       "@meli-challenge/meli-ui/products": [
         "libs/meli-ui/products/src/index.ts"
       ],
-      "@meli-challenge/products": ["libs/products/src/index.ts"],
       "@meli-challenge/products/products-api": [
         "libs/products/products-api/src/index.ts"
+      ],
+      "@meli-challenge/products/products-core": [
+        "libs/products/products-core/src/index.ts"
       ],
       "@meli-challenge/products/products-ui": [
         "libs/products/products-ui/src/index.ts"

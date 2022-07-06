@@ -1,0 +1,36 @@
+@import "/variables.module.scss";
+
+.search {
+    &-container {
+        border: none;
+        width: 100%;
+        height: 36px;
+        border-radius: 2px;
+        display: flex;
+    }
+
+    &-input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        padding-left: 15px;
+        margin-left: -12px;
+
+        &::placeholder {
+            color: $secondary-text-color;
+            opacity: .6;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &-submit {
+        border: none;
+        width: 46px;
+        flex: none;
+        background-color: $secondary-color;
+        color: $secondary-text-color;
+    }
+}
