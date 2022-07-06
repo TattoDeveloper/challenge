@@ -4,13 +4,14 @@ import { injectable } from 'tsyringe';
 import { ProductDetailMapper } from '../mapper/product-detail.mapper';
 import { SearchMapper } from '../mapper/search.mapper';
 
+const API_URL = process.env.MELI_API_URL
 @injectable()
 export class ProductRepository implements IProductRepository {
 
     @response<SearchResultDTO>( SearchMapper )
     async search(query: string): Promise<SearchResultDTO> {
         return httpClient({
-            url: `https://api.mercadolibre.com/sites/MLA/search?q=${query}&limit=4`
+            url: `${API_URL}sites/MLA/search?q=${query}&limit=4`
         })
     }
 
@@ -19,14 +20,14 @@ export class ProductRepository implements IProductRepository {
 
         const response = await Promise.all([
                 httpClient({
-                    url: `https://api.mercadolibre.com/items/${id}`
+                    url: `${API_URL}items/${id}`
                 }),
                 httpClient({
-                    url: `https://api.mercadolibre.com/items/${id}/description`
+                    url: `${API_URL}/items/${id}/description`
                 })
             ])
         const categoryResponse = await httpClient({
-            url: `https://api.mercadolibre.com/categories/${response[0].category_id}`
+            url: `${API_URL}categories/${response[0].category_id}`
         })
         return {...response[0], ...response[1], category: categoryResponse}
     }
