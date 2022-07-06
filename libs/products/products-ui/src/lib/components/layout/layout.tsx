@@ -2,7 +2,6 @@ import React, { ReactNode } from 'react';
 import { Container, Col } from 'react-bootstrap';
 import styles from './layout.module.scss';
 
-/* eslint-disable-next-line */
 export interface LayoutProps {
   children: ReactNode
 }
@@ -13,7 +12,7 @@ export function Layout({ children }: LayoutProps) {
       <Col md={{span:10, offset: 1}} >
          { children }
       </Col>
-  </Container>
+   </Container>
   );
 }
 

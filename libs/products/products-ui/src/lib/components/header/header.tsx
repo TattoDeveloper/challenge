@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Container, Col, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Layout from '../layout/layout';
 import SearcBox from '../search-box/search-box';
@@ -15,7 +15,7 @@ export function Header({
 }: HeaderProps) {
   return (
     <header className={ style['header'] }>
-       <Layout>
+      <Layout>
          <Row
           className={`align-items-center ${style['header-container']}`}>
             <Col className={style['header-logo']}>

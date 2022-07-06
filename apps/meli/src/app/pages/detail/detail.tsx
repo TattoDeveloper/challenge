@@ -2,6 +2,7 @@ import { ProductDetailDTO } from '@meli-challenge/products/products-core'
 import {
     Breadcrumb, 
     DetailUseCase, 
+    Head, 
     Layout, 
     ProductCard, 
     ProductContainer, 
@@ -16,6 +17,7 @@ export const Details = () => {
 
     return (
         <Layout>
+            <Head title={product ? product.title : ''} />
             <Breadcrumb categories={
                 product ? [product.category as string, product.title] :
                 ['']

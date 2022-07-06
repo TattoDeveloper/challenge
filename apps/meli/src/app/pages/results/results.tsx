@@ -1,5 +1,6 @@
 import { Product, SearchResultDTO } from '@meli-challenge/products/products-core'
 import { Breadcrumb, 
+    Head, 
     Layout, ProductContainer, 
     ProductListItem, 
     SearchUseCase, useAdapter } from '@meli-challenge/products/products-ui'
@@ -12,6 +13,7 @@ export const Results = () => {
 
     return (
         <Layout>
+            <Head title={ query } />
             <Breadcrumb categories={ data?.categories?.length ? data?.categories : [query]}  />
             <ProductContainer>
                <>
